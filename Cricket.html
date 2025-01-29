@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRICKET GAME</title>
+    <link rel="stylesheet" href="Cricket.css" />
+  </head>
+
+  <body>
+    <section id="sec-1">
+      <h1 id="hed-1">BAT BALL STUMP GAME</h1>
+    </section>
+
+    <section id="sec-2">
+
+      <!--* BAT BUTTON OPEN------------------------>
+      <button
+        class="btn"
+        onclick="
+        let computer_Choice = generateComputerChoice();
+        let result_Msg = getResult('BAT' , computer_Choice);
+        showResult('BAT', computer_Choice, result_Msg);"
+      >
+        <img src="images/bat.png" alt="BAT-IMAGE" class="choise-image">
+      </button>
+      <!--* BAT BUTTON CLOSED------------------------>
+
+      <!--* BALL BUTTON OPEN------------------------->
+      <button
+        class="btn"
+        onclick="
+        computer_Choice = generateComputerChoice();
+        result_Msg = getResult('BALL' , computer_Choice);
+        showResult('BALL', computer_Choice, result_Msg);"
+      >
+        <img src="images/ball.png" alt="BALL-IMAGE" class="choise-image">
+      </button>
+      <!--* BALL BUTTON CLOSE------------------------->
+
+      <!--* WICKET BUTTON OPEN------------------------>
+      <button
+        class="btn"
+        onclick="
+        computer_Choice = generateComputerChoice(); 
+        result_Msg = getResult('WICKET' , computer_Choice);
+        showResult('WICKET', computer_Choice, result_Msg);"
+      >
+        <img src="images/stump.png" alt="WICKET-IMAGE" class="choise-image">
+      </button>
+      <!--* WICKET BUTTON CLOSED------------------------>
+
+    
+      <h2 id="user-move" class="hed-2"></h2>
+      <h2 id="computer-move" class="hed-2"></h2>
+      <h2 id="result" class="hed-2"></h2>
+      <h2 id="score" class="hed-2"></h2>
+  
+      <!--* RESET BUTTON OPENED------------------------>
+      <button
+        id="resetBtn"
+        onclick="localStorage.clear()
+        resetScore();
+      "
+      >
+        <img src="images/refresh.png" alt="REFRESH-IMAGE" class="ref-img">
+      </button>
+      <!--* RESET BUTTON CLOSED------------------------>
+    </section>
+
+
+
+    <script src="Cricket.js"></script>
+  </body>
+</html>
